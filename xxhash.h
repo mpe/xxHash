@@ -3048,9 +3048,9 @@ enum XXH_VECTOR_TYPE /* fake enum */ {
 #    include <altivec.h>
 #  endif
 
-typedef __vector unsigned long long xxh_u64x2;
-typedef __vector unsigned char xxh_u8x16;
-typedef __vector unsigned xxh_u32x4;
+typedef __vector unsigned long long xxh_u64x2 __attribute__((__may_alias__));
+typedef __vector unsigned char xxh_u8x16 __attribute__((__may_alias__));
+typedef __vector unsigned xxh_u32x4 __attribute__((__may_alias__));
 
 # ifndef XXH_VSX_BE
 #  if defined(__BIG_ENDIAN__) \
